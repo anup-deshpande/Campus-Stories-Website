@@ -8,5 +8,26 @@
 </head>
 <body>
     
+    <form id="newpost-form" method="POST" action="/feeds/addPost">
+        <table class="newpost-form">
+            <tr>
+                <td><input type="text" id="post" name="post" placeholder="What's New Around?"></td>
+            </tr>
+            <tr>
+                <td><button class="post-button" type="submit">Post</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <table>
+        <% for(var i=0;i<feeds.length;i++){ %>
+            <tr>
+                <td><%= feeds[i].title %><br><%= feeds[i].date %></td>
+            </tr> 
+        <%}%>
+    </table>
+        
+       
+
 </body>
 </html>
