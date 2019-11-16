@@ -4,27 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/assets/stylesheet/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <title>Signup</title>
 </head>
 
 <body>
+        <div class="signup-card">
         <form id="signup-form" method="POST" action="/user/signup">
-        <table class="signup-form">
+        <table class="signup-form-table">
+            <br><br><br>
             <tr>
-                <td><input type="text" id="firstname" name="firstname" placeholder="First Name"></td>
+                <td><input type="text" id="firstname" name="firstname" placeholder="First Name" required></td>
             </tr>
 
             <tr>
-                <td><input type="text" id="lastname" name="lastname" placeholder="Last Name"></td>
+                <td><input type="text" id="lastname" name="lastname" placeholder="Last Name" required></td>
             </tr>
 
             <tr>
-                <td><input type="email" id="email" name="email" placeholder="email"></td>
+                <td><input type="email" id="email" name="email" placeholder="email" required></td>
             </tr>
 
             <tr>
                 <td>
-                    <select name="university">
+                    <select name="university" required>
+                        <option value="" disabled>Select University</option>
                         <option value="University of North Carolina at Charlotte">University of North Carolina at Charlotte</option>
                         <option value="University of Texas at Arlington">University of Texas at Arlington</option>
                         <option value="NYU">NYU</option>
@@ -33,7 +38,7 @@
             </tr>
 
             <tr>
-                <td><input type="password" id="password" name="password" placeholder="Password"></td>
+                <td><input type="password" id="password" name="password" placeholder="Password" required></td>
             </tr>
             
            <tr>
@@ -41,5 +46,6 @@
             </tr>
         </table>
         </form>
+        </div>
     </body>
 </html>

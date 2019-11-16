@@ -1,0 +1,135 @@
+/* Login page styles */
+
+.login-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+    max-width: 600px;
+    height: 450px;
+}
+  
+.login-card:hover {
+    box-shadow: 0 8px 13px 0 rgba(0,0,0,0.2);
+}
+
+.login-form-table{
+	width: 100%;
+    font-family: 'Poppins','sans-serif';
+}
+
+.login-form-table td{
+	padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-form-table input{
+    width: 65%;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 5px;
+    border: 0.5px solid #ccc;
+    resize: vertical;
+    font-family: 'Poppins','sans-serif';
+}
+
+.Login-button{
+    font-size:12px;
+    text-decoration: none;
+	background-color: #EEEEEE;
+	border: 0px;
+    border-radius:10px;
+    color: white;
+    padding: 6px 60px 6px 60px;
+    background-color:#4CAF50;
+}
+
+.login-form-table a{
+    font-size: 12px;
+    font-family: 'Poppins','sans-serif';
+    margin-top: 0px;
+}
+
+
+
+/* SignUp Page styles */
+
+.signup-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+    max-width: 600px;
+    height: 450px;
+}
+  
+.signup-card:hover {
+    box-shadow: 0 8px 13px 0 rgba(0,0,0,0.2);
+}
+
+.signup-form-table{
+	width: 100%;
+    font-family: 'Poppins','sans-serif';
+}
+
+.signup-form-table td{
+	padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    text-align: center;
+}
+
+.signup-form-table input{
+    width: 65%;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 5px;
+    border: 0.5px solid #ccc;
+    resize: vertical;
+    font-family: 'Poppins','sans-serif';
+}
+
+.signup-form-table select{
+    width: 69%;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 5px;
+    border: 0.5px solid #ccc;
+    resize: vertical;
+    font-family: 'Poppins','sans-serif';
+    color: grey;
+}
+
+.signup-button{
+    font-size:12px;
+    text-decoration: none;
+	background-color: #EEEEEE;
+	border: 0px;
+    border-radius:10px;
+    color: white;
+    padding: 6px 60px 6px 60px;
+    background-color:#4CAF50;
+}
+
+.signup-form-table a{
+    font-size: 12px;
+    font-family: 'Poppins','sans-serif';
+    margin-top: 0px;
+}
+
+/* Feeds Page styles */
+
+
+.newpost-form textarea{
+    resize: none;
+    font-size: 13px;
+    font-family: 'Poppins','sans-serif';
+    border-radius: 5px;
+    border: 0.5px solid #ccc;
+}
+
+

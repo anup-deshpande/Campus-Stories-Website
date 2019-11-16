@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/assets/stylesheet/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <title>Feeds</title>
 </head>
 <body>
     
-    <form id="newpost-form" method="POST" action="/feeds/addPost">
-        <table class="newpost-form">
+    <!-- <form id="newpost-form" method="POST" action="/feeds/addPost">
+        <table class="newpost-form-table">
             <tr>
                 <td><input type="text" id="post" name="post" placeholder="What's New Around?"></td>
             </tr>
             <tr>
                 <td><button class="post-button" type="submit">Post</button></td>
             </tr>
-        </table>
-    </form>
+        </table>    
+    </form> -->
+
+    <div class="newpost-form">
+            <!-- <input type="text" id="post" name="post" placeholder="What's New Around?"> -->
+            <textarea rows = "5" cols = "60" name = "post" placeholder="What's New Around?" ></textarea>
+    </div>
 
     <table>
         <% for(var i=0;i<feeds.length;i++){ %>
