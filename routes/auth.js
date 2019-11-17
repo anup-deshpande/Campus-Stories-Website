@@ -8,7 +8,7 @@ router.get('/signup', (req,res) => {
 
 // Render Login Page
 router.get('/login', (req,res) => {
-    res.render('login')
+    res.render('login');
 });
 
 // Login with existing user
@@ -26,6 +26,13 @@ router.post('/login',async function(req,res){
     })
     
 });
+
+// Logout - Delete stored token, Go back to login
+router.post('/logout', (req,res) => {
+    res.clearCookie('token');
+    res.redirect('/user/login');
+});
+
 
 // Create a new user
 router.post('/signup',async function(req,res){

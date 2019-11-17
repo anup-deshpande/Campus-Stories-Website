@@ -123,6 +123,7 @@
 
 /* Feeds Page styles */
 
+/* Create post styles */
 .newpost-form{
     margin-top: 70px;
     margin-left: auto;
@@ -152,6 +153,7 @@
     background-color:#4CAF50;
 }
 
+/* Show posts css */
 .post-box{
     border: 2px;
     margin-left: auto;
@@ -163,7 +165,7 @@
 
 
 .post-title{
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .post-description{
@@ -171,7 +173,28 @@
 }
 
 .post-date{
-    font-size: 10px;
+    font-size: 9px;
 }
 
+/* Logout styles */
+
+.logout{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.logout button{ 
+    font-size:13px;  
+    color: rgb(26, 26, 26);
+    background-color: white;
+    border: 1px solid rgb(201, 0, 0);
+    padding: 5px 40px 5px 40px;  
+    border-radius: 5px;
+}
+
+.logout button:hover {
+    background-color:rgb(201, 0, 0); 
+    color: white;
+  }
 
