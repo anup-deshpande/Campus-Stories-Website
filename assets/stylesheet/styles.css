@@ -64,11 +64,11 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     height: 500px;
-    margin-top: 170px;
+    margin-top: 70pt;
     margin-left: auto;
     margin-right: auto;
     max-width: 600px;
-    min-width: 400px;
+    min-width: 300px;
 }
   
 .signup-card:hover {
@@ -133,7 +133,7 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 900px;
-    min-width: 450px;
+    min-width: 300px;
 }
 
 .page-header p{
@@ -148,7 +148,7 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 900px;
-    min-width: 450px;
+    min-width: 300px;
 }
 
 .newpost-form textarea{
@@ -170,7 +170,7 @@
     color: white;
     padding: 5px 45px 5px 45px;
     background-color:#4CAF50;
-    
+    margin-right: 5px;
 }
 
 /* Show posts css */
@@ -178,7 +178,7 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 900px;
-    min-width: 450px;
+    min-width: 300px;
     font-family: 'Poppins','sans-serif';
 }
 
