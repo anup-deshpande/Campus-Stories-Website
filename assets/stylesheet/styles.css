@@ -39,6 +39,18 @@
     font-family: 'Poppins','sans-serif';
 }
 
+.login-form-table p{
+    margin-right: 60px;
+    margin-left: 60px;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: rgb(202, 6, 6);
+    border: 0.5px solid rgb(202, 6, 6);
+    resize: vertical;
+    font-family: 'Poppins','sans-serif';
+}
+
 .Login-button{
     font-size:12px;
     text-decoration: none;

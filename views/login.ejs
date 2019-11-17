@@ -31,13 +31,17 @@
                 <tr>
                     <td><a href="/user/signup">New User? Register here.</a></td>
                 </tr>
+
+                <tr>
+                    <% if(message){ %>
+                    <td><p><%= message %></p></td>
+                    <% } %>
+                </tr>
+               
             </table>
         </form>
     </div>
      
-
-
-
     
 </body>
 

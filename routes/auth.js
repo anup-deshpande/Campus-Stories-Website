@@ -8,7 +8,7 @@ router.get('/signup', (req,res) => {
 
 // Render Login Page
 router.get('/login', (req,res) => {
-    res.render('login');
+    res.render('login',{message: null});
 });
 
 // Login with existing user
@@ -23,6 +23,7 @@ router.post('/login',async function(req,res){
         res.redirect('/feeds') 
     }).catch(err => {
         console.log(err);
+        res.render('login',{message: "Invalid Username or Password"});
     })
     
 });
