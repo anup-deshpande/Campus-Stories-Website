@@ -123,13 +123,50 @@
 
 /* Feeds Page styles */
 
+.newpost-form{
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    min-width: 450px;
+}
 
 .newpost-form textarea{
     resize: none;
+    width: 99%;
     font-size: 13px;
-    font-family: 'Poppins','sans-serif';
     border-radius: 5px;
     border: 0.5px solid #ccc;
+    font-family: 'Poppins','sans-serif';
+}
+
+.newpost-form button{
+    float: right;
+    font-size:11px;
+    text-decoration: none;
+	background-color: #EEEEEE;
+	border: 0px;
+    border-radius:3px;
+    color: white;
+    padding: 5px 45px 5px 45px;
+    background-color:#4CAF50;
+}
+
+.post-box{
+    border: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    min-width: 450px;
+    font-family: 'Poppins','sans-serif';
+}
+
+.post-title{
+    font-size: 13px;
+}
+
+.post-date{
+    font-size: 10px;
 }
 
 

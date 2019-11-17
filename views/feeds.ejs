@@ -10,31 +10,26 @@
 </head>
 <body>
     
-    <!-- <form id="newpost-form" method="POST" action="/feeds/addPost">
-        <table class="newpost-form-table">
-            <tr>
-                <td><input type="text" id="post" name="post" placeholder="What's New Around?"></td>
-            </tr>
-            <tr>
-                <td><button class="post-button" type="submit">Post</button></td>
-            </tr>
-        </table>    
-    </form> -->
-
     <div class="newpost-form">
-            <!-- <input type="text" id="post" name="post" placeholder="What's New Around?"> -->
-            <textarea rows = "5" cols = "60" name = "post" placeholder="What's New Around?" ></textarea>
+        <form action="/feeds/addPost" method="post">
+            <textarea rows = "2" cols = "60" name = "post" placeholder="What's New Around?" required></textarea><br>
+            <textarea rows = "5" cols = "60" name = "description" placeholder="Description"></textarea><br>
+            <button type="submit">Post</button>
+        </form>    
     </div>
 
-    <table>
-        <% for(var i=0;i<feeds.length;i++){ %>
-            <tr>
-                <td><%= feeds[i].title %><br><%= feeds[i].date %></td>
-            </tr> 
-        <%}%>
-    </table>
-        
-       
+    <br><br>
 
+    <div class="post-box">
+            <% for(var i=0;i<feeds.length;i++){ %>
+                <div class="post-title">
+                    <%= feeds[i].title %>
+                </div>
+                <div class="post-date">
+                    Posted on: <%= feeds[i].date.split('T')[0] %>        
+                </div>
+                <br>
+            <%}%>   
+    </div>
 </body>
 </html>
