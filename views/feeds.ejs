@@ -10,7 +10,9 @@
 </head>
 <body>
 
-    
+    <div class="page-header">
+        <p> Campus Stories</p>
+    </div>
     
     <div class="newpost-form">
         <form action="/feeds/addPost" method="post">
@@ -20,24 +22,32 @@
         </form>    
     </div>
 
-    <br><br>
+    <br><br><br>
+    
 
     <div class="post-box">
+            <p> Events happening around <%= feeds[0].university %></p>
             <% for(var i=0;i<feeds.length;i++){ %>
-                <div class="post-title">
-                    <%= feeds[i].title %>
+                <div class = "post-frame">
+                    <div class="post-title">
+                        <%= feeds[i].title %>
+                    </div>
+                    <% if(feeds[i].description){ %>
+                    <div class="post-description">
+                        <%= feeds[i].description %>
+                    </div>        
+                    <% } %>
+                    <div class="post-date">
+                        Posted on: <%= feeds[i].date.split('T')[0] %>        
+                    </div>
+                    <% if(i < feeds.length - 1){ %>
+                        <hr>
+                    <% } %>
                 </div>
-                <% if(feeds[i].description){ %>
-                <div class="post-description">
-                    <%= feeds[i].description %>
-                </div>        
-                <% } %>
-                <div class="post-date">
-                    Posted on: <%= feeds[i].date.split('T')[0] %>        
-                </div>
-                <br>
             <%}%>   
     </div>
+
+    <br><br>
 
     <div class="logout">
         <form action="/user/logout" method="post">

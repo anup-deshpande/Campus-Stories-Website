@@ -4,6 +4,11 @@ const axios = require('axios');
 // Show feeds for authenticated user
 router.get('/',async function(req,res){
     
+    // Check for the token, If not found send back to login page
+    if (!req.cookies.token) {
+        res.redirect('/user/login');
+    }
+
     // Create header with token
     const header = {
         "Content-Type":"application/json",
