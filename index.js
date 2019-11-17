@@ -8,9 +8,6 @@ const port =  process.env.PORT || 5000;
 const bodyParser=require('body-parser');
 const cookieParser = require('cookie-parser')
 
-
-
-
 // Import routes
 const authRoute = require('./routes/auth');
 const feedRoute = require('./routes/feedRoutes');
@@ -26,5 +23,10 @@ app.set('view engine','ejs');
 // Route Middlewares
 app.use('/user',authRoute);
 app.use('/feeds',feedRoute);
+
+// Default Route
+app.get('/*',(req,res) =>{
+    res.redirect('/user/login');
+})
 
 app.listen(port, () => console.log('Server up and running'));
