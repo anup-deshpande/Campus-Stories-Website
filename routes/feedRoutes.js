@@ -32,18 +32,40 @@ router.post('/addPost', async function(req,res){
         "Authorization": req.cookies.token
     }
 
-    axios.post('https://college-event-portal-api.herokuapp.com/api/posts/addPost', 
-    {
-	    title: req.body.post
-    },
-    {headers : header}
-    ).then(response => {
-       // Post added successfully. Refresh feeds page
-       res.redirect('/feeds/');
+    // Check if description exist and form data accordingly
+    if(req.body.description){
+       
+        axios.post('https://college-event-portal-api.herokuapp.com/api/posts/addPost', 
+        {
+            title: req.body.title,
+            description: req.body.description
+        },
+        {headers : header}
+        ).then(response => {
+            // Post added successfully. Refresh feeds page
+            res.redirect('/feeds/');
+        }).catch(err => {
+            console.log(err);
+        })
+        
+    }else{
+       
+        axios.post('https://college-event-portal-api.herokuapp.com/api/posts/addPost', 
+        {
+            title: req.body.title
+        },
+        {headers : header}
+        ).then(response => {
+            // Post added successfully. Refresh feeds page
+            res.redirect('/feeds/');
+        }).catch(err => {
+            console.log(err);
+        })
+        
+    }
+    
 
-    }).catch(err => {
-        console.log(err);
-    })
+   
 
 });
 

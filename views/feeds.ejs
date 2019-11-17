@@ -12,7 +12,7 @@
     
     <div class="newpost-form">
         <form action="/feeds/addPost" method="post">
-            <textarea rows = "2" cols = "60" name = "post" placeholder="What's New Around?" required></textarea><br>
+            <textarea rows = "2" cols = "60" name = "title" placeholder="What's New Around?" required></textarea><br>
             <textarea rows = "5" cols = "60" name = "description" placeholder="Description"></textarea><br>
             <button type="submit">Post</button>
         </form>    
@@ -25,6 +25,11 @@
                 <div class="post-title">
                     <%= feeds[i].title %>
                 </div>
+                <% if(feeds[i].description){ %>
+                <div class="post-description">
+                    <%= feeds[i].description %>
+                </div>        
+                <% } %>
                 <div class="post-date">
                     Posted on: <%= feeds[i].date.split('T')[0] %>        
                 </div>
