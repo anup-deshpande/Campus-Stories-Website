@@ -14,6 +14,7 @@
         <form id="signup-form" method="POST" action="/user/signup">
         <table class="signup-form-table">
             <br><br><br>
+            <tr><td>Sign Up</td></tr>
             <tr>
                 <td><input type="text" id="firstname" name="firstname" placeholder="First Name" required></td>
             </tr>
@@ -23,7 +24,7 @@
             </tr>
 
             <tr>
-                <td><input type="email" id="email" name="email" placeholder="email" required></td>
+                <td><input type="email" id="email" name="email" placeholder="Email" required></td>
             </tr>
 
             <tr>
@@ -44,6 +45,13 @@
            <tr>
                 <td><button class="signup-button" type="submit">Sign Up</button></td>
             </tr>
+
+            <tr>
+                <% if(message){ %>
+                <td><p><%= message %></p></td>
+                <% } %>
+            </tr>
+
         </table>
         </form>
         </div>

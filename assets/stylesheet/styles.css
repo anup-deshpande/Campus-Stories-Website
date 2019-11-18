@@ -7,8 +7,8 @@
     margin-top: 70pt;
     margin-left: auto;
     margin-right: auto;
-    min-height: 100px;
-    max-height: 400px;
+    min-height: 400px;
+    max-height: 500px;
     max-width: 500px;
     min-width: 300px;
 }
@@ -27,6 +27,10 @@
     padding-bottom: 7px;
     width: 100%;
     text-align: center;
+}
+
+.login-form-table h1{
+    margin-top: 0;
 }
 
 .login-form-table input{
@@ -105,6 +109,18 @@
     font-size: 13px;
     border-radius: 5px;
     border: 0.5px solid #ccc;
+    resize: vertical;
+    font-family: 'Poppins','sans-serif';
+}
+
+.signup-form-table p{
+    margin-right: 60px;
+    margin-left: 60px;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: rgb(202, 6, 6);
+    border: 0.5px solid rgb(202, 6, 6);
     resize: vertical;
     font-family: 'Poppins','sans-serif';
 }
