@@ -32,7 +32,7 @@ router.get('/',async function(req,res){
 
 
 // Add new post route
-router.post('/addPost', async function(req,res){
+router.post('/', async function(req,res){
 
     // Create header with token
     const header = {
@@ -96,7 +96,7 @@ router.post('/delete',async function(req,res){
           id:req.body.id
         }}
       ).then(response => {
-
+        // Post deleted successfully. Refresh feeds page
         res.redirect('/feeds');
 
      }).catch(err => {
