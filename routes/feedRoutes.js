@@ -1,12 +1,15 @@
 const router = require('express').Router();
 const axios = require('axios');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 // Show feeds for authenticated user
 router.get('/',async function(req,res){
-    
+  
     // Check for the token, If not found send back to login page
     if (!req.cookies.token) {
-        res.redirect('/user/login');
+        res.redirect('/login');
     }
 
     // Create header with token
@@ -15,11 +18,11 @@ router.get('/',async function(req,res){
         "Authorization": req.cookies.token
     }
 
-    axios.get('https://college-event-portal-api.herokuapp.com/api/posts', 
+    axios.get(process.env.POSTS_URL, 
     {headers : header})
     .then(response => {
 
-        res.render('feeds',{feeds: response.data});
+        res.render('feeds',{feeds: response.data, user: req.cookies.user});
 
     }).catch(err => {
         console.log(err);
@@ -40,7 +43,7 @@ router.post('/addPost', async function(req,res){
     // Check if description exist and form data accordingly
     if(req.body.description){
        
-        axios.post('https://college-event-portal-api.herokuapp.com/api/posts/addPost', 
+        axios.post(process.env.POSTS_URL, 
         {
             title: req.body.title,
             description: req.body.description
@@ -48,21 +51,21 @@ router.post('/addPost', async function(req,res){
         {headers : header}
         ).then(response => {
             // Post added successfully. Refresh feeds page
-            res.redirect('/feeds/');
+            res.redirect('/feeds');
         }).catch(err => {
             console.log(err);
         })
         
     }else{
        
-        axios.post('https://college-event-portal-api.herokuapp.com/api/posts/addPost', 
+        axios.post(process.env.POSTS_URL, 
         {
             title: req.body.title
         },
         {headers : header}
         ).then(response => {
             // Post added successfully. Refresh feeds page
-            res.redirect('/feeds/');
+            res.redirect('/feeds');
         }).catch(err => {
             console.log(err);
         })
@@ -73,5 +76,34 @@ router.post('/addPost', async function(req,res){
    
 
 });
+
+
+// Delete a post 
+router.post('/delete',async function(req,res){
+
+    // Check for the token, If not found send back to login page
+    if (!req.cookies.token) {
+        res.redirect('/login');
+    }
+
+    axios.delete(
+        process.env.POSTS_URL,
+        {headers: {
+            "Content-Type":"application/json",
+            "Authorization": req.cookies.token
+        },
+        data:{
+          id:req.body.id
+        }}
+      ).then(response => {
+
+        res.redirect('/feeds');
+
+     }).catch(err => {
+        console.log(err);
+    })
+    
+});
+
 
 module.exports = router;

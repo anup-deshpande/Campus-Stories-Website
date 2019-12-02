@@ -216,6 +216,15 @@
     font-size: 18px;
 }
 
+.post-delete button{
+    float: right;
+    margin-right: 5px;
+    color: black;
+    background: none;
+    border: none;
+
+}
+
 .post-title{
     font-size: 14px;
 }
