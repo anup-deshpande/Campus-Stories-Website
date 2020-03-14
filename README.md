@@ -7,3 +7,10 @@ This website enables you to setup a social environment in the university. Studen
 * API Documentation - https://documenter.getpostman.com/view/7708206/SW7Z387J?version=latest
 
 ![](campusstories.jpg)
+
+### Dependencies
+
+1) axios - https://github.com/axios/axios.git
+2) .env - https://github.com/motdotla/dotenv.git
+3) ejs - https://ejs.co
+4) express - https://expressjs.com
